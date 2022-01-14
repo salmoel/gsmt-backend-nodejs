@@ -10,7 +10,7 @@
         * GET[X] 
         * POST[X] 
         * PUT[X] 
-        * DELETE[]
+        * DELETE[X]
 */
 
 const express = require('express');
