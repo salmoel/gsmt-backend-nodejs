@@ -13,10 +13,15 @@
         * DELETE[X]
 */
 
+//-- Variaveis globais
 const express = require('express');
 const server = express();
 const router = express.Router();
 
+//-- Aplicacao de middleware
+server.use(express.json()); //-- Serve para o express saber qual o formato de dados virá no body da requisição
+
+//-- Criação das Rotas
 router.get('/task', (_req, res) => {
     return res.send('Get Ok!');
 });
@@ -26,12 +31,17 @@ router.post('/task', (_req, res) => {
 });
 
 router.put('/task/:id', (_req, res) => {
+    // Faltou pegar as informacoes enviadas na req (id)
     return res.send('Put Ok!')
 });
 
 router.delete('/task', (_req, res) => {
+    // Faltou colocar parametro para saber qual registro será excluido
+    // Faltou pegar as informacoes enviadas na req (id)
     return res.send('Deletet Ok!')
 });
 
 server.use(router);
-server.listen(3334, () => console.log('Server On!'));
+
+//-- Configuração do serviço
+server.listen(3334, () => console.log('Server running at http://localhost:3334/!'));
