@@ -34,7 +34,7 @@ INSERT INTO clientes (nome, email, empresa) VALUES ('Salmoel', 'salmoel@brodevs.
 
 O comando UPDATE é bem parecido com o comando INSERT, porém é utilizado para atualizar registros do banco de dados.
 
-````
+```
 UPDATE clientes A SET nome = 'Samuel', email = 'samuel@brodevs.org';
 ```
 
